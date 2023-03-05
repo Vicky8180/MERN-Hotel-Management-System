@@ -1,0 +1,32 @@
+.Rooms-one{
+
+    height: 160px;
+    width: 800px;
+    /* background: #ae2626; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    padding-top: 20px;
+
+
+  
+
+}
+.RoomImage{
+    background-color: rgb(84, 88, 10);
+    height: 160px;
+    width: 350px;
+}
+.RoomData{
+    background: #e3e3e3;
+    height: 160px;
+    width: 350px;
+}
+.RoomData-2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 10px;
+    text-align: left;
+    margin-left: 20px;
+
+}
