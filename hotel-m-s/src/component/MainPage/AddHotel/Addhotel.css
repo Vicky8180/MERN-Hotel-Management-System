@@ -2,11 +2,11 @@
 
 .main-1{
     background-color: rgb(255, 255, 255);
- height: 500px;
+ height: 550px;
 width: 1000px;
 padding-top: 15px;
 margin-left: 23%;
-margin-top: 6%;
+margin-top: 5%;
 box-shadow: 10px 10px 50px 17px rgb(210, 221, 224);
 
 }
@@ -19,7 +19,7 @@ h1{
     text-align: center;
     /* display: flex; */
     margin-left: 37%;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 .taker{
     width: 100px;
@@ -44,4 +44,9 @@ h1{
     background-color: green;
     color: white;
       border: .1px solid rgb(255, 255, 255);
+
+}
+
+.Add_Hotel:hover {
+    cursor: pointer;
 }

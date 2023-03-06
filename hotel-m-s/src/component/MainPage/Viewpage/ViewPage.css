@@ -1,7 +1,7 @@
 
 
 .View-Area{
-    background: #f1f1f1;
+    background: #ffffff;
     height: 700px;
     width: 60%;
      float: left;
@@ -28,9 +28,8 @@
         -ms-overflow-style: none; 
         scrollbar-width: none; 
 
-    
+    position: absolute;
 } */
-
 /* .scrollRemover::-webkit-scrollbar {
     -ms-overflow-style: none;  
     overflow-y: scroll;
@@ -42,8 +41,8 @@
 .view-Area-filter{
     height: 700px;
      width: 25%;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
      margin-top: 20px;
      margin-left: 68%;
-     background: #3207f1;
+     background: #ffffff;
 }
