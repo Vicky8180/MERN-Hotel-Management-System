@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors =require('cors')
 const port = 5000
 
 // this is importing or requireing database connection in it
@@ -14,6 +15,10 @@ app.use((req,res,next)=>{
   next();
 })
 
+// var cors = require('cors');
+app.use(cors());
+
+
 
 
 
@@ -21,9 +26,19 @@ app.use((req,res,next)=>{
 const roomsRoute= require('./routers/Datafecting');
 //  here we are creating access for room roots and this will 
 // fetch all data from backend
+const User_Data=require('./routers/User_Data')
 const Add_Hotel = require('./routers/Add_Hotel')
+const Booked_HotelTakingId=require("./routers/DataForAvail")
+app.use(express.json())
+const Update_Data = require("./routers/Updatedata")
+const Cancel=require("./routers/Cancel")
  app.use('/api/Database1forRoom', roomsRoute);
  app.use('/api/Database1forRoom',Add_Hotel);
+ app.use('/api/Database1forRoom',User_Data);
+ app.use('/api/Database1forRoom',Booked_HotelTakingId);
+ app.use('/api/Database1forRoom',Cancel);
+
+ app.use('/api/Database1forRoom',Update_Data);
 
 // console.log(tt);
 
