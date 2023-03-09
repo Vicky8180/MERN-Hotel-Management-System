@@ -1,26 +1,79 @@
-import React from "react";
+import React, { useState , useEffect} from "react";
 import "./Butoons.css"
 import{Link} from "react-router-dom"
-
+import moment from "moment"
+import axios from "axios";
 // import { BrowserRouter,Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 
+
+
 function Buttons() {
 
+
+
+
+
+
+  // const [availbleroom2,setavailbleroom2]=useState([]);
+  // useEffect(()=>{
+  //    const temp=async()=>{
+  //        try {
+  //            const data= (await axios.get('/api/Database1forRoom/bookedhotel')).data
+  //            console.log(data);
+         
+  //            setavailbleroom2(data.result);
+  //        } catch (error) {
+  //            console.log(error);
+  //        }
+  //    }
+  //    temp();
+  //  },[])
+
+
+
+
+
+
+
+
+
+
+
+const [fromDate,setfromDate]= useState({});
+const [toDate,settoDate]= useState({}) ;
   const nevigate = useNavigate();
   function Add_hotel_nevi() {
     nevigate("/addhotel");
 }
 
 function Update(){
-  nevigate("/bookedroom")
+  nevigate("/mappingbook")
 }
+
 function Availble_room(){
-  nevigate("/availbleroom")
+  nevigate("/mapforavail")
 }
 function Booked_room(){
-  nevigate("/bookedroom")
+  nevigate("/mappingbook")
 }
+function takingDateF(e){
+  // setfromDate(e.takingDate.value);
+  const newDate = moment(new Date(e.target.value)).format('YYYY-MM-DD');
+setfromDate(newDate);
+
+  console.log(fromDate);
+
+}
+function takingDateT(e){
+  // setfromDate(e.takingDate.value);
+  const newDate = moment(new Date(e.target.value)).format('YYYY-MM-DD');
+settoDate(newDate);
+
+  console.log(toDate);
+
+}
+
 
   return (
     <>
@@ -51,7 +104,8 @@ function Booked_room(){
             </div>
           </div>
 
-          <input className="btn1" type="date" id="birthday" name="birthday"></input>
+          <input className="btn1" type="date" id="birthday"  placeholder="gg" name="birthday" onChange={takingDateF}></input>
+          <input className="btn1" type="date" id="birthday" name="birthday" onChange={takingDateT}></input>
 
 
           {/* <button className="btn2">

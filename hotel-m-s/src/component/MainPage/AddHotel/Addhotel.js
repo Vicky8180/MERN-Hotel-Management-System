@@ -7,7 +7,7 @@ import Navbar from "../Navbar/Navbar";
 
 function Addhotel() {
   const nevigate = useNavigate();
-  const [credentials, setCredentials] = useState({ room: "", roomNo: 88, roomtype: "Type", roomprice: 100, roomstatus: "Status", imgurl: "Imgurl" })
+  const [credentials, setCredentials] = useState({ room: "", roomNo: "", roomtype: "", roomprice: "", roomstatus: "", imgurl: "" })
 
   const hitting_endpoint = async (event) => {
     event.preventDefault();
@@ -18,8 +18,8 @@ function Addhotel() {
         'Content-Type':'application/json'
       },
       body:JSON.stringify({
-        room: credentials.room,
-        roomNo: credentials.roomNo,
+        room:credentials.room,
+        roomNo:credentials.roomNo,
         roomtype: credentials.roomtype,
         roomprice: credentials.roomprice,
         roomstatus: credentials.roomstatus,
@@ -28,9 +28,10 @@ function Addhotel() {
     })
 
     // console.log(credentials);
-    const json=await response.json();
-    console.log(json);
+    // const json=await response.json();
+    // console.log(json);
     alert("Hotel add scucessfully")
+    console.log(credentials)
     nevigate("/fpfr");
 
     // }
@@ -54,12 +55,12 @@ function Addhotel() {
           <input className="taker" type="text" name='room' placeholder="Room" value={credentials.room} onChange={changer} />
 
 
-          <input className="taker" type="number" name='roomNo' value={credentials.roomNo} onChange={changer} />
-          <input className="taker" type="text" name='roomtype' value={credentials.roomtype} onChange={changer} />
-          <input className="taker" type="number" name='roomprice' value={credentials.roomprice} onChange={changer} />
+          <input className="taker"   placeholder="Room No" type="number" name='roomNo' value={credentials.roomNo} onChange={changer} />
+          <input className="taker" type="text"   placeholder="Room Type" name='roomtype' value={credentials.roomtype} onChange={changer} />
+          <input className="taker" type="number" name='roomprice'   placeholder="Room Price" value={credentials.roomprice} onChange={changer} />
 
-          <input className="taker" type="number" name='roomstatus' value={credentials.roomstatus} onChange={changer} />
-          <input className="taker" type="text" name='imgurl' value={credentials.imgurl} onChange={changer} />
+          <input className="taker" type="number" name='roomstatus'  placeholder="Room Status" value={credentials.roomstatus} onChange={changer} />
+          <input className="taker" type="text" name='imgurl'  placeholder="Hotel Img Link" value={credentials.imgurl} onChange={changer} />
 
         </div>
       </form>

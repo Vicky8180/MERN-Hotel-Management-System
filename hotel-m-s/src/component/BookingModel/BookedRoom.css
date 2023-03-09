@@ -1,11 +1,11 @@
 .B_R_main{
 
     background: #ffffff;
-    height: 750px;
-    width: 84%;
-    margin-top: 1%;
-    margin-left: 8%;
-    position: absolute;
+    height: 210px;
+    width: 70%;
+    margin-top: 0.2%;
+    margin-left: 1%;
+    /* position: absolute; */
     
 
     /* box-shadow: 10px 10px 50px 17px rgb(166, 207, 219); */
@@ -14,25 +14,25 @@
 .B_R_main_2{
     background: #dadada;
     height: 40px;
-    width: 84%;
+    width: 80%;
     margin-top: 0%;
-    margin-left: 8%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    margin-left: 5%;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
 
 }
 .B_R_MAIN_3{
 
     background: #ffffff;
-    height: 670px;
-    width: 96%;
+    height: 210px;
+    width: 90%;
     margin-top: 0.2%;
-    margin-left: 2%;
+    margin-left: 3%;
     position: absolute;
     /* display: flex; */
-    
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* box-shadow: 5px 5px 5px 0px rgb(135, 149, 152); */
+    /* overflow-x: hidden;
+    overflow-y: auto; */
     text-align:justify;
 
 }
@@ -45,7 +45,7 @@
     margin-left: 5%;
     box-shadow: 5px 5px 5px 0px rgb(135, 149, 152);
     /* position: absolute; */
-    /* position: absolute; */
+    position: absolute;
     display: flex;
 
 

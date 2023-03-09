@@ -21,13 +21,13 @@ function ViewPage(){
        }
        temp();
      },[])
-
+console.log(dataq)
 
     return (
         <>
     <div className="scrollRemover">
 <div className="View-Area">
-{dataq.map((items)=>
+{dataq.map(items=>
     <Rooms key={items._id} gdata={items} />
 )}
 
